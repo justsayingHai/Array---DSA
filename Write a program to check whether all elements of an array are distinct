@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int size = 6;
+    int numbers[size] = {10, 23, 543, 65, 10, 390};
+    bool same_num_found = false;
+    
+    for(int i = 0; i < size; i++)
+    {
+        cout << numbers[i] << " ";
+    }
+    
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = i + 1; j < size; j++)
+        {
+            if(numbers[i] == numbers[j])
+            {
+                same_num_found = true;
+            }
+        }
+    }
+    
+    if(same_num_found)
+    {
+        cout << "All elements are not distinct!";
+    }
+    else
+    {
+        cout << "All elements are distinct!";
+    }
+    
+    return 0;
+}
